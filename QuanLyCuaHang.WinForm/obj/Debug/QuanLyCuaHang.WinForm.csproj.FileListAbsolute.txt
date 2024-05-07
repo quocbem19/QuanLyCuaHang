@@ -1,0 +1,15 @@
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.WinForm.exe.config
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.WinForm.exe
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.WinForm.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.BusinessLayer.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.DTO.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.BusinessLayer.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\QuanLyCuaHang.DTO.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.csproj.AssemblyReference.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Login.resources
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Properties.Resources.resources
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.csproj.GenerateResource.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.csproj.CoreCompileInputs.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCu.343FC1BD.Up2Date
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.exe
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.pdb

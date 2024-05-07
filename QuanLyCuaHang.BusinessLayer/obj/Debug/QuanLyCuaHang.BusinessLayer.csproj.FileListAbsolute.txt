@@ -1,0 +1,11 @@
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.BusinessLayer.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.BusinessLayer.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.DTO.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.DTO.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\bin\Debug\QuanLyCuaHang.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\obj\Debug\QuanLyCuaHang.BusinessLayer.csproj.AssemblyReference.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\obj\Debug\QuanLyCuaHang.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\obj\Debug\QuanLyCu.88166654.Up2Date
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\obj\Debug\QuanLyCuaHang.BusinessLayer.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.BusinessLayer\obj\Debug\QuanLyCuaHang.BusinessLayer.pdb

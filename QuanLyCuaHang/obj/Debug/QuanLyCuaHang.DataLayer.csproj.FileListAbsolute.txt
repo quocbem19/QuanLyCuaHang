@@ -1,0 +1,6 @@
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.DataLayer.csproj.AssemblyReference.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.DataLayer.csproj.CoreCompileInputs.cache
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
