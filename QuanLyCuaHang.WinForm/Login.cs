@@ -32,10 +32,7 @@ namespace QuanLyCuaHang.WinForm
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+ 
         //Thoát chương trình sẽ xuất hiện form thông báo. tránh nhầm lẫn khi nhấn nhầm
         //Sử dụng FormClosing để áp dụng tất cả trường hợp thoát chương trình
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,8 +42,9 @@ namespace QuanLyCuaHang.WinForm
                 e.Cancel = true;
             }
         }
+        //nút đăng nhập
         //Click button Đăng nhập đẩy form Manager
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Guna2Button1_Click(object sender, EventArgs e)
         {
             //show FormManager
             FormManager f = new FormManager();
@@ -55,6 +53,16 @@ namespace QuanLyCuaHang.WinForm
             //Chỉ thao tác được trên form Dialog
             f.ShowDialog();
             this.Show();
+        }
+        //nút thoát 
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+                    Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
