@@ -16,3 +16,4 @@ D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.pdb
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.FormManager.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\Guna.UI2.dll
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Account.resources
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Admin.resources
