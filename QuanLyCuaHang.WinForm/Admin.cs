@@ -15,7 +15,6 @@ namespace QuanLyCuaHang.WinForm
         public Admin()
         {
             InitializeComponent();
-        }
 
         private void tpAccount_Click(object sender, EventArgs e)
         {
