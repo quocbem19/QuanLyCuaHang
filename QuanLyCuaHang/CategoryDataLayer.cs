@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using QuanLyCuaHang.DataLayer;
+using QuanLyCuaHang.DTO;
+
+namespace QuanLyCuaHang.DataLayer
+{
+    public class CategoryDataLayer
+    {
+        private static CategoryDataLayer instance;
+
+        public static CategoryDataLayer Instance
+        {
+            get { if (instance == null) instance = new CategoryDataLayer(); return CategoryDataLayer.instance; }
+            private set { CategoryDataLayer.instance = value; }
+        }
+
+        private CategoryDataLayer() { }
+
+        public List<Category> GetListCategory()
+        {
+            List<Category> list = new List<Category>();
+
+            string query = "select * from FoodCategory";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Category category = new Category(item);
+                list.Add(category);
+            }
+
+            return list;
+        }
+
+        public Category GetCategoryByID(int id)
+        {
+            Category category = null;
+
+            string query = "select * from FoodCategory where id = " + id;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                category = new Category(item);
+                return category;
+            }
+
+            return category;
+        }
+    }
+}

@@ -4,3 +4,6 @@ D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.DataLayer.csproj.As
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.DataLayer.csproj.CoreCompileInputs.cache
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.dll
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCuaHang.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.DTO.dll
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\bin\Debug\QuanLyCuaHang.DTO.pdb
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang\obj\Debug\QuanLyCu.208ABB04.Up2Date

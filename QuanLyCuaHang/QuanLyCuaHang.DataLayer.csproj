@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLyCuaHang</RootNamespace>
     <AssemblyName>QuanLyCuaHang</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,8 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AccountDataLayer.cs" />
+    <Compile Include="BillDataLayer.cs" />
+    <Compile Include="BillInfoDataLayer.cs" />
+    <Compile Include="CategoryDataLayer.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="FoodDataLayer.cs" />
+    <Compile Include="MenuDataLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableDataLayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyCuaHang.DTO\QuanLyCuaHang.DTO.csproj">
+      <Project>{7793e0d5-e032-4d2f-9d43-05c0c66689dc}</Project>
+      <Name>QuanLyCuaHang.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

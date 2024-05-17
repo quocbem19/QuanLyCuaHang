@@ -12,6 +12,8 @@ namespace QuanLyCuaHang.WinForm
 {
     public partial class Account : Form
     {
+        public object UserName { get; internal set; }
+
         public Account()
         {
             InitializeComponent();

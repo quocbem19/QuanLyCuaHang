@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCuaHang.BusinessLayer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCuaHang.DTO", "QuanLyCuaHang.DTO\QuanLyCuaHang.DTO.csproj", "{7793E0D5-E032-4D2F-9D43-05C0C66689DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCuaHang.WinForm", "QuanLyCuaHang.WinForm\QuanLyCuaHang.WinForm.csproj", "{7D1B06E0-F9FE-4D1A-A84A-2114EB5F3A9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCuaHang.PresentationLayer", "QuanLyCuaHang.WinForm\QuanLyCuaHang.PresentationLayer.csproj", "{7D1B06E0-F9FE-4D1A-A84A-2114EB5F3A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -74,8 +74,8 @@ namespace QuanLyCuaHang.WinForm
         //set timer cho butoon thong tin
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Account a = new Account();
-            a.ShowDialog();
+            Account b = new Account();
+            b.ShowDialog();
         }
 
         private void sidebar_Paint(object sender, PaintEventArgs e)
@@ -131,7 +131,7 @@ namespace QuanLyCuaHang.WinForm
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             Admin a = new Admin();
-            a.ShowDialog();
+               a.ShowDialog();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

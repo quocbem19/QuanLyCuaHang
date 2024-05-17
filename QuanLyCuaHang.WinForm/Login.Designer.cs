@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txbUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,7 +109,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txbPassword);
+            this.panel3.Controls.Add(this.txbPassWord);
             this.panel3.Location = new System.Drawing.Point(2, 148);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -129,32 +129,32 @@
             this.label3.Text = "Mật khẩu";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txbPassword
+            // txbPassWord
             // 
-            this.txbPassword.Animated = true;
-            this.txbPassword.AutoRoundedCorners = true;
-            this.txbPassword.BorderRadius = 17;
-            this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPassword.DefaultText = "";
-            this.txbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Location = new System.Drawing.Point(146, 11);
-            this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '●';
-            this.txbPassword.PlaceholderText = "";
-            this.txbPassword.SelectedText = "";
-            this.txbPassword.Size = new System.Drawing.Size(419, 36);
-            this.txbPassword.TabIndex = 8;
-            this.txbPassword.UseSystemPasswordChar = true;
+            this.txbPassWord.Animated = true;
+            this.txbPassWord.AutoRoundedCorners = true;
+            this.txbPassWord.BorderRadius = 17;
+            this.txbPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbPassWord.DefaultText = "";
+            this.txbPassWord.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbPassWord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbPassWord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPassWord.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassWord.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassWord.Location = new System.Drawing.Point(146, 11);
+            this.txbPassWord.Name = "txbPassWord";
+            this.txbPassWord.PasswordChar = '●';
+            this.txbPassWord.PlaceholderText = "";
+            this.txbPassWord.SelectedText = "";
+            this.txbPassWord.Size = new System.Drawing.Size(419, 36);
+            this.txbPassWord.TabIndex = 8;
+            this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txbUsername);
+            this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(2, 81);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -162,27 +162,27 @@
             this.panel2.Size = new System.Drawing.Size(578, 62);
             this.panel2.TabIndex = 0;
             // 
-            // txbUsername
+            // txbUserName
             // 
-            this.txbUsername.Animated = true;
-            this.txbUsername.AutoRoundedCorners = true;
-            this.txbUsername.BorderRadius = 17;
-            this.txbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUsername.DefaultText = "";
-            this.txbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Location = new System.Drawing.Point(146, 14);
-            this.txbUsername.Name = "txbUsername";
-            this.txbUsername.PasswordChar = '\0';
-            this.txbUsername.PlaceholderText = "";
-            this.txbUsername.SelectedText = "";
-            this.txbUsername.Size = new System.Drawing.Size(419, 36);
-            this.txbUsername.TabIndex = 8;
+            this.txbUserName.Animated = true;
+            this.txbUserName.AutoRoundedCorners = true;
+            this.txbUserName.BorderRadius = 17;
+            this.txbUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbUserName.DefaultText = "";
+            this.txbUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbUserName.Location = new System.Drawing.Point(146, 14);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.PasswordChar = '\0';
+            this.txbUserName.PlaceholderText = "";
+            this.txbUserName.SelectedText = "";
+            this.txbUserName.Size = new System.Drawing.Size(419, 36);
+            this.txbUserName.TabIndex = 8;
             // 
             // label2
             // 
@@ -229,8 +229,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button btnExit;
-        private Guna.UI2.WinForms.Guna2TextBox txbPassword;
-        private Guna.UI2.WinForms.Guna2TextBox txbUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txbPassWord;
+        private Guna.UI2.WinForms.Guna2TextBox txbUserName;
         private System.Windows.Forms.Label label3;
     }
 }
