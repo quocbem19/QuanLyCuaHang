@@ -17,7 +17,7 @@ using Microsoft.SqlServer.Management.Sdk.Sfc;
 
 namespace QuanLyCuaHang.WinForm
 {
-    public partial class Admin : Form
+    public partial class Administer : Form
     {
 
         BindingSource foodList = new BindingSource();
@@ -25,7 +25,7 @@ namespace QuanLyCuaHang.WinForm
         BindingSource accountList = new BindingSource();
         BindingSource categoryList = new BindingSource();
         public Account loginAccount;
-        public Admin()
+        public Administer()
         {
             InitializeComponent();
              LoadData();

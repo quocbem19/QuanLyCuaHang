@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHang.WinForm
 {
-    partial class Admin
+    partial class Administer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -125,6 +126,8 @@
             this.btnAddAccount = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgvAccount = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.quanLyCuaHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyCuaHangDataSet = new QuanLyCuaHang.WinForm.QuanLyCuaHangDataSet();
             this.rpViewer = new System.Windows.Forms.TabPage();
             this.tcAdmin.SuspendLayout();
             this.tbBill.SuspendLayout();
@@ -155,6 +158,8 @@
             this.guna2Panel17.SuspendLayout();
             this.guna2Panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyCuaHangDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyCuaHangDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -1488,6 +1493,7 @@
             // 
             // dtgvAccount
             // 
+            this.dtgvAccount.AllowUserToOrderColumns = true;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
             this.dtgvAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1508,11 +1514,12 @@
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvAccount.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dtgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgvAccount.Location = new System.Drawing.Point(6, 3);
+            this.dtgvAccount.Location = new System.Drawing.Point(0, 0);
             this.dtgvAccount.Name = "dtgvAccount";
             this.dtgvAccount.RowHeadersVisible = false;
-            this.dtgvAccount.Size = new System.Drawing.Size(1287, 359);
+            this.dtgvAccount.Size = new System.Drawing.Size(1287, 358);
             this.dtgvAccount.TabIndex = 1;
             this.dtgvAccount.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvAccount.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1536,6 +1543,16 @@
             this.dtgvAccount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvAccount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // quanLyCuaHangDataSetBindingSource
+            // 
+            this.quanLyCuaHangDataSetBindingSource.DataSource = this.quanLyCuaHangDataSet;
+            this.quanLyCuaHangDataSetBindingSource.Position = 0;
+            // 
+            // quanLyCuaHangDataSet
+            // 
+            this.quanLyCuaHangDataSet.DataSetName = "QuanLyCuaHangDataSet";
+            this.quanLyCuaHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rpViewer
             // 
             this.rpViewer.Location = new System.Drawing.Point(4, 44);
@@ -1546,13 +1563,13 @@
             this.rpViewer.Text = "BÁO CÁO";
             this.rpViewer.UseVisualStyleBackColor = true;
             // 
-            // Admin
+            // Administer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 535);
             this.Controls.Add(this.tcAdmin);
-            this.Name = "Admin";
+            this.Name = "Administer";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.tcAdmin.ResumeLayout(false);
@@ -1595,6 +1612,8 @@
             this.guna2Panel17.PerformLayout();
             this.guna2Panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyCuaHangDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyCuaHangDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1684,5 +1703,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2TextBox txbDisplayName;
         private Guna.UI2.WinForms.Guna2TextBox txbUserName;
+        private System.Windows.Forms.BindingSource quanLyCuaHangDataSetBindingSource;
+        private QuanLyCuaHangDataSet quanLyCuaHangDataSet;
     }
 }

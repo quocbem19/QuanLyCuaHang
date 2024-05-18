@@ -48,10 +48,10 @@ namespace QuanLyCuaHang.WinForm
         //Click button Đăng nhập đẩy form Manager
         private void Guna2Button1_Click(object sender, EventArgs e)
         {
-            string userName = txbUserName.Text;
-            string password = txbPassWord.Text;
-            if (Login(userName, password))
-            {
+           string userName = txbUserName.Text;
+           string password = txbPassWord.Text;
+           if (PerformLogin(userName, password))
+           {
                 Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName); // Dòng 55
                 //show FormManager
                 FormManager f = new FormManager();
@@ -61,13 +61,13 @@ namespace QuanLyCuaHang.WinForm
                 f.ShowDialog();
                 this.Show();
             }
-            else
+           else
             {
                 MessageBox.Show("Vui Lòng Nhập lại, Tài Khoản Hoặc Mật Khẩu!");
             }
         }
 
-        bool Login(string userName, string password)
+        bool PerformLogin(string userName, string password)
         {
             return AccountDataLayer.Instance.Login(userName, password);
         }

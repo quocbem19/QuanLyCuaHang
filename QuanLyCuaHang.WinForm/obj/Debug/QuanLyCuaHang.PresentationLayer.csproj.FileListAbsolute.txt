@@ -2,7 +2,6 @@ D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.Presentatio
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.PresentationLayer.csproj.SuggestedBindingRedirects.cache
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.exe.config
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Account.resources
-D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Admin.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.FormManager.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Login.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Properties.Resources.resources
@@ -174,3 +173,4 @@ D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\ru\Microsoft.Data.SqlClie
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCu.536A2534.Up2Date
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Administer.resources

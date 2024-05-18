@@ -24,6 +24,7 @@ namespace QuanLyCuaHang.DataLayer
         private string connectionSTR = "Data Source=.\\QUOCBEEM;Initial Catalog=QuanLyCuaHang;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -50,7 +51,7 @@ namespace QuanLyCuaHang.DataLayer
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                adapter.Fill(data);
+       //         adapter.Fill(data);
 
                 connection.Close();
             }
@@ -113,7 +114,7 @@ namespace QuanLyCuaHang.DataLayer
                         }
                     }
                 }
-
+                 
                 data = command.ExecuteScalar();
 
                 connection.Close();
