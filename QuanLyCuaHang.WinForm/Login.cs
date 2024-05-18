@@ -67,7 +67,7 @@ namespace QuanLyCuaHang.WinForm
             }
             else
             {
-                MessageBox.Show("Vui Lòng Nhập lại, Tài Khoản Hoặc Mật Khẩu!");
+                MessageBox.Show("Vui Lòng Nhập lại, Tài Khoản Hoặc Mật Khẩu Không Đúng!", "Thong Baos");
             }
         }
 
