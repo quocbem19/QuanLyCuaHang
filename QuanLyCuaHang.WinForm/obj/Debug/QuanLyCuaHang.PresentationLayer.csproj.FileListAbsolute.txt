@@ -1,7 +1,6 @@
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.PresentationLayer.csproj.AssemblyReference.cache
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.PresentationLayer.csproj.SuggestedBindingRedirects.cache
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.exe.config
-D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Account.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.FormManager.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Login.resources
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Properties.Resources.resources

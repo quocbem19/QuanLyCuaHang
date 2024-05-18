@@ -8,6 +8,7 @@ namespace QuanLyCuaHang.WinForm
     public partial class AccountProfile : Form
     {
         private Account loginAccount;
+        private AccountProfile loginAccount1;
 
         public Account LoginAccount
         {
@@ -26,6 +27,10 @@ namespace QuanLyCuaHang.WinForm
             LoginAccount = acc;
         }
 
+        public AccountProfile(AccountProfile loginAccount1)
+        {
+            this.loginAccount1 = loginAccount1;
+        }
 
         void ChangeAccount(Account acc)
         {
