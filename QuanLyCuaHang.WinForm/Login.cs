@@ -44,28 +44,33 @@ namespace QuanLyCuaHang.WinForm
             }
         }
 
+
+
         //nút đăng nhập
         //Click button Đăng nhập đẩy form Manager
         private void Guna2Button1_Click(object sender, EventArgs e)
         {
-           string userName = txbUserName.Text;
-           string password = txbPassWord.Text;
-           if (PerformLogin(userName, password))
-           {
+            string userName = txbUserName.Text;
+            string password = txbPassWord.Text;
+            if (PerformLogin(userName, password))
+            {
                 Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName); // Dòng 55
-                //show FormManager
-                FormManager f = new FormManager();
+
+                // Tạo một đối tượng AccountProfile từ thông tin của đối tượng Account
+                AccountProfile loginProfile = new AccountProfile(loginAccount);
+
+                // Show FormManager với đối tượng AccountProfile vừa tạo
+                FormManager f = new FormManager(loginProfile);
                 this.Hide();
-                //Ẩn from phía trước, cụ thể ẩn from đăng nhập sau khi hiện from manager
-                //Chỉ thao tác được trên form Dialog
                 f.ShowDialog();
                 this.Show();
             }
-           else
+            else
             {
                 MessageBox.Show("Vui Lòng Nhập lại, Tài Khoản Hoặc Mật Khẩu!");
             }
         }
+
 
         bool PerformLogin(string userName, string password)
         {

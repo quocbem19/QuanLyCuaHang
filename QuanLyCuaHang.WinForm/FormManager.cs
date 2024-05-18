@@ -17,15 +17,15 @@ namespace QuanLyCuaHang.WinForm
     public partial class FormManager : Form
     {
         bool sidebarExpand;
-        private Account loginAccount;
+        private AccountProfile loginAccount;
 
-        public Account LoginAccount
+        public AccountProfile LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount.Type); }
         }
 
-        public FormManager(Account acc)
+        public FormManager(AccountProfile acc)
         {
             InitializeComponent();
 
@@ -178,14 +178,16 @@ namespace QuanLyCuaHang.WinForm
         //set timer cho butoon thong tin
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Account a = new Account(LoginAccount);
+            AccountProfile a = new AccountProfile(LoginAccount);
             a.UpdateAccount += a_UpdateAccount;
             a.ShowDialog();
         }
+
         void a_UpdateAccount(object sender, AccountEvent e)
         {
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thong tin tai khoan (" + e.Acc.DisplayName + ")";
         }
+
 
 
         private void sidebar_Paint(object sender, PaintEventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHang.WinForm
 {
-    partial class Account
+    partial class AccountProfile
     {
         /// <summary>
         /// Required designer variable.

@@ -1,34 +1,33 @@
 ﻿using QuanLyCuaHang.DataLayer;
 using QuanLyCuaHang.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyCuaHang.WinForm
 {
-    public partial class Account : Form
+    public partial class AccountProfile : Form
     {
         private Account loginAccount;
 
         public Account LoginAccount
         {
-            get { return loginAccount; ChangeAccount(LoginAccount); }
-            set { loginAccount = value; ChangeAccount(LoginAccount); }
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount); }
         }
-        public Account( Account acc)
+
+        public int Type { get; internal set; }
+        public string DisplayName { get; internal set; }
+        public string UserName { get; private set; }
+
+        public AccountProfile(Account acc)
         {
             InitializeComponent();
+
             LoginAccount = acc;
         }
 
 
-        void ChangeAccount(Account acc) 
+        void ChangeAccount(Account acc)
         {
             txbUserName.Text = LoginAccount.UserName;
             txbDisplayName.Text = LoginAccount.DisplayName;
@@ -41,20 +40,23 @@ namespace QuanLyCuaHang.WinForm
             string reenterPass = txbReEnterPass.Text;
             string userName = txbUserName.Text;
 
+
             if (!newpass.Equals(reenterPass))
             {
                 MessageBox.Show("Vui Long Nhap Lai Mat Khau Dung Mat Khau Moi!");
-            }else
+            }
+            else
             {
-                if(AccountDataLayer.Instance.UpdateAccount(userName, displayName, password, newpass))
+                if (AccountDataLayer.Instance.UpdateAccount(userName, displayName, password, newpass))
                 {
                     MessageBox.Show("Cap nhat tai khoan thanh cong!");
-                    if(updateAccount != null)
-                        updateAccount(this, new AccountEvent(AccountDataLayer.Instance.GetAccountByUserName(userName)));
-                }else
+                    if (updateAccount != null)
+                        updateAccount(this, new AccountEvent(LoginAccount)); // Sửa chỗ này để truyền LoginAccount
+                }
+                else
                 {
                     MessageBox.Show("Vui long dien dung mat khau!");
-                }            
+                }
             }
         }
 
@@ -64,6 +66,7 @@ namespace QuanLyCuaHang.WinForm
             add { updateAccount += value; }
             remove { updateAccount -= value; }
         }
+
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -91,19 +94,13 @@ namespace QuanLyCuaHang.WinForm
 
     }
 
-    public class AccountEvent:EventArgs
+    public class AccountEvent : EventArgs
     {
-        public Account acc;
-
-        public Account Acc
-        {
-            get { return acc; }
-            set { acc = value; }
-        }
+        public Account Acc { get; set; } // Sửa đổi từ AccountProfile thành Account
 
         public AccountEvent(Account acc)
         {
-            this.Acc = acc; 
+            this.Acc = acc;
         }
     }
 }

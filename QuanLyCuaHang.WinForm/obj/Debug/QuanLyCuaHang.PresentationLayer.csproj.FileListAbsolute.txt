@@ -174,3 +174,4 @@ D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\zh-Hans\Microsoft.Data.Sq
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCu.536A2534.Up2Date
 D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.Administer.resources
+D:\Soure\QuanLyCuaHang\QuanLyCuaHang.WinForm\obj\Debug\QuanLyCuaHang.WinForm.AccountProfile.resources
