@@ -2,6 +2,7 @@
 using QuanLyCuaHang.DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -44,10 +45,11 @@ namespace QuanLyCuaHang.WinForm
         {
             string userName = txbUserName.Text;
             string passWord = txbPassWord.Text;
-            Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName);
-            if (loginAccount !=null && loginAccount.Password == passWord)
+           
+         //   if (loginAccount !=null && loginAccount.Password == passWord)
+         if (Login(userName, passWord))
             {
-               
+                Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName);
                 FormManager f = new FormManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();

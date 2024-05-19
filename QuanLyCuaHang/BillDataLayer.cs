@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyCuaHang.DTO;
+using System.Data.SqlClient;
 
 namespace QuanLyCuaHang.DataLayer
 {
@@ -21,12 +22,6 @@ namespace QuanLyCuaHang.DataLayer
 
         private BillDataLayer() { }
 
-        /// <summary>
-        /// Thành công: bill ID
-        /// thất bại: -1
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public int GetUncheckBillIDByTableID(int id)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Bill WHERE idTable = " + id + " AND status = 0");
@@ -52,7 +47,19 @@ namespace QuanLyCuaHang.DataLayer
 
         public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
         {
-            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+      //      DataTable dt = new DataTable();
+    //SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionData);
+
+      //      connection.Open();
+        //SqlCommand command = new SqlCommand("USP_GetListBillDate", connection);
+      //      command.CommandType = CommandType.StoredProcedure;
+       //     command.Parameters.AddWithValue("@CheckIn", checkIn);
+       //     command.Parameters.AddWithValue("@CheckOut", checkOut);
+       //     SqlDataAdapter adapter = new SqlDataAdapter(command);
+      //      adapter.Fill(dt);
+
+      //      return dt;
+             return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
         }
 
         public DataTable GetBillListByDateAndPage(DateTime checkIn, DateTime checkOut, int pageNum)

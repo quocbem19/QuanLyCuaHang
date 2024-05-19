@@ -244,13 +244,21 @@ namespace QuanLyCuaHang.WinForm
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
+
             Table table = lsvBill.Tag as Table;
+
+            if (table == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần thanh toán");
+                return 
+            }  
+                
 
             int idBill = BillDataLayer.Instance.GetUncheckBillIDByTableID(table.ID);
             int discount = (int)nmDisCount.Value;
 
-            double totalPrice = Convert.ToDouble(txbTotalPrice.Text.Split(',')[0]);
-            double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
+            float totalPrice = float.Parse(txbTotalPrice.Text.Split(',')[0]);
+            float finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
 
             if (idBill != -1)
             {

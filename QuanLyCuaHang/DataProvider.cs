@@ -21,7 +21,7 @@ namespace QuanLyCuaHang.DataLayer
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=.\\QUOCBEEM;Initial Catalog=QuanLyCuaHang;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        private string connectionSTR = "Data Source=QUOCBEEM\\QUOCBEEM;Initial Catalog=QuanLyCuaHang;Integrated Security=True;Encrypt=False";
 
 
 
