@@ -17,15 +17,16 @@ namespace QuanLyCuaHang.WinForm
     public partial class FormManager : Form
     {
         bool sidebarExpand;
-        private AccountProfile loginAccount;
 
-        public AccountProfile LoginAccount
+        private Account loginAccount;
+
+        public Account LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount.Type); }
         }
 
-        public FormManager(AccountProfile acc)
+        public FormManager(Account acc)
         {
             InitializeComponent();
 
@@ -280,12 +281,12 @@ namespace QuanLyCuaHang.WinForm
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Administer administer = new Administer();
-            administer.loginAccount = LoginAccount;
-            administer.InsertFood += a_InsertFood;
-            administer.DeleteFood += a_DeleteFood;
-            administer.UpdateFood += a_UpdateFood;
-            administer.ShowDialog();
+            Administer a = new Administer();
+            a.loginAccount = LoginAccount;
+            a.InsertFood += a_InsertFood;
+            a.DeleteFood += a_DeleteFood;
+            a.UpdateFood += a_UpdateFood;
+            a.ShowDialog();
         }
 
         void a_UpdateFood(object sender, EventArgs e)

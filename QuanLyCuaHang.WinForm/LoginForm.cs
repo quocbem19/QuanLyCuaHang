@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang.WinForm
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -33,9 +33,6 @@ namespace QuanLyCuaHang.WinForm
         {
 
         }
-
-        //Thoát chương trình sẽ xuất hiện form thông báo. tránh nhầm lẫn khi nhấn nhầm
-        //Sử dụng FormClosing để áp dụng tất cả trường hợp thoát chương trình
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
@@ -43,41 +40,29 @@ namespace QuanLyCuaHang.WinForm
                 e.Cancel = true;
             }
         }
-
-
-
-        //nút đăng nhập
-        //Click button Đăng nhập đẩy form Manager
         private void Guna2Button1_Click(object sender, EventArgs e)
         {
             string userName = txbUserName.Text;
-            string password = txbPassWord.Text;
-            if (PerformLogin(userName, password))
+            string passWord = txbPassWord.Text;
+            if (Login(userName, passWord))
             {
-                Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName); // Dòng 55
-
-                // Tạo một đối tượng AccountProfile từ thông tin của đối tượng Account
-                AccountProfile loginProfile = new AccountProfile(loginAccount);
-
-                // Show FormManager với đối tượng AccountProfile vừa tạo
-                FormManager f = new FormManager(loginProfile);
+                Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName);
+                FormManager f = new FormManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Vui Lòng Nhập lại, Tài Khoản Hoặc Mật Khẩu Không Đúng!", "Thong Baos");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
             }
         }
 
 
-        bool PerformLogin(string userName, string password)
+        bool Login(string userName, string password)
         {
             return AccountDataLayer.Instance.Login(userName, password);
         }
-
-        //nút thoát 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();

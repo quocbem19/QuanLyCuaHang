@@ -2,34 +2,25 @@
 using QuanLyCuaHang.DTO;
 using System;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+
 
 namespace QuanLyCuaHang.WinForm
 {
     public partial class AccountProfile : Form
     {
         private Account loginAccount;
-        private AccountProfile loginAccount1;
 
         public Account LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
-
-        public int Type { get; internal set; }
-        public string DisplayName { get; internal set; }
-        public string UserName { get; private set; }
-
         public AccountProfile(Account acc)
         {
             InitializeComponent();
 
             LoginAccount = acc;
-        }
-
-        public AccountProfile(AccountProfile loginAccount1)
-        {
-            this.loginAccount1 = loginAccount1;
         }
 
         void ChangeAccount(Account acc)
@@ -56,7 +47,7 @@ namespace QuanLyCuaHang.WinForm
                 {
                     MessageBox.Show("Cap nhat tai khoan thanh cong!");
                     if (updateAccount != null)
-                        updateAccount(this, new AccountEvent(LoginAccount)); // Sửa chỗ này để truyền LoginAccount
+                        updateAccount(this, new AccountEvent(AccountDataLayer.Instance.GetAccountByUserName(userName)));
                 }
                 else
                 {
@@ -101,7 +92,12 @@ namespace QuanLyCuaHang.WinForm
 
     public class AccountEvent : EventArgs
     {
-        public Account Acc { get; set; } // Sửa đổi từ AccountProfile thành Account
+        public Account acc;
+        public Account Acc
+        {
+            get { return acc; }
+            set { acc = value; }
+        }
 
         public AccountEvent(Account acc)
         {

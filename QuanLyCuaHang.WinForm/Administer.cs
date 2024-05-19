@@ -24,7 +24,7 @@ namespace QuanLyCuaHang.WinForm
         BindingSource tableList = new BindingSource();
         BindingSource accountList = new BindingSource();
         BindingSource categoryList = new BindingSource();
-        public AccountProfile loginAccount;
+        public Account loginAccount;
         public Administer()
         {
             InitializeComponent();
