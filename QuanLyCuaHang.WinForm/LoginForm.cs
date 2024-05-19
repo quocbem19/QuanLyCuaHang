@@ -44,9 +44,10 @@ namespace QuanLyCuaHang.WinForm
         {
             string userName = txbUserName.Text;
             string passWord = txbPassWord.Text;
-            if (Login(userName, passWord))
+            Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName);
+            if (loginAccount !=null && loginAccount.Password == passWord)
             {
-                Account loginAccount = AccountDataLayer.Instance.GetAccountByUserName(userName);
+               
                 FormManager f = new FormManager(loginAccount);
                 this.Hide();
                 f.ShowDialog();

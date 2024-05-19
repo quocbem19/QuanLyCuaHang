@@ -23,17 +23,16 @@ namespace QuanLyCuaHang.DataLayer
 
         public bool Login(string userName, string passWord)
         {
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
+
+           byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
             byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
 
             string hasPass = "";
 
             foreach (byte item in hasData)
             {
-                hasPass += item;
+               hasPass += item;
             }
-            //var list = hasData.ToString();
-            //list.Reverse();
 
             string query = "USP_Login @userName , @passWord";
 
@@ -56,7 +55,7 @@ namespace QuanLyCuaHang.DataLayer
 
         public Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from account where userName = '" + userName + "'");
+            DataTable data = DataProvider.Instance.ExecuteQuery($"Select * from Account where UserName = '{userName}'");
 
             foreach (DataRow item in data.Rows)
             {

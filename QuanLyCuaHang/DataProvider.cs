@@ -51,7 +51,7 @@ namespace QuanLyCuaHang.DataLayer
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-       //         adapter.Fill(data);
+       adapter.Fill(data);
 
                 connection.Close();
             }
