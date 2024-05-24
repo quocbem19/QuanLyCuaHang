@@ -64,7 +64,8 @@ namespace QuanLyCuaHang.WinForm
 
             List<Table> tableList = TableDataLayer.Instance.LoadTableList();
 
-            foreach (Table item in tableList) {
+            foreach (Table item in tableList)
+            {
                 Button btn = new Button() { Width = TableDataLayer.TableWidth, Height = TableDataLayer.TableHeight };
                 btn.Text = item.Name + Environment.NewLine + item.Status;
                 btn.Click += btn_Click;
@@ -107,7 +108,7 @@ namespace QuanLyCuaHang.WinForm
         void LoadComboboxTable(ComboBox cb)
         {
             cb.DataSource = TableDataLayer.Instance.LoadTableList();
-            cb.DisplayMember = "Name";  
+            cb.DisplayMember = "Name";
         }
 
         #endregion
@@ -151,7 +152,7 @@ namespace QuanLyCuaHang.WinForm
         {
             //set the minimue and maximum sizeif sudebar panel
 
-            if(sidebarExpand)
+            if (sidebarExpand)
             {
                 //if sidebar is
                 sidebar.Width -= 10;
@@ -160,12 +161,13 @@ namespace QuanLyCuaHang.WinForm
                     sidebarExpand = false;
                     sidebarTimer.Stop();
                 }
-            }else
+            }
+            else
             {
                 sidebar.Width += 10;
-                if(sidebar.Width == sidebar.MaximumSize.Width)
+                if (sidebar.Width == sidebar.MaximumSize.Width)
                 {
-                    sidebarExpand = true;   
+                    sidebarExpand = true;
                     sidebarTimer.Stop();
                 }
             }
@@ -205,7 +207,17 @@ namespace QuanLyCuaHang.WinForm
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int id = 0;
 
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Category selected = cb.SelectedItem as Category;
+            id = selected.ID;
+
+            LoadFoodListByCategoryID(id);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -219,6 +231,12 @@ namespace QuanLyCuaHang.WinForm
             }
 
             int idBill = BillDataLayer.Instance.GetUncheckBillIDByTableID(table.ID);
+            if (cbFood.SelectedItem == null)
+            {
+                MessageBox.Show("Hãy chọn món");
+                return;
+            }
+
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value;
 
@@ -244,27 +262,33 @@ namespace QuanLyCuaHang.WinForm
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-
             Table table = lsvBill.Tag as Table;
 
             if (table == null)
             {
                 MessageBox.Show("Vui lòng chọn bàn cần thanh toán");
-                return 
-            }  
-                
+                return;
+            }
 
             int idBill = BillDataLayer.Instance.GetUncheckBillIDByTableID(table.ID);
             int discount = (int)nmDisCount.Value;
 
-            float totalPrice = float.Parse(txbTotalPrice.Text.Split(',')[0]);
+            // Ensure the culture is correct for parsing
+            CultureInfo culture = new CultureInfo("vi-VN");
+
+            if (!float.TryParse(txbTotalPrice.Text, NumberStyles.Currency, culture, out float totalPrice))
+            {
+                MessageBox.Show("Tổng tiền không đúng định dạng");
+                return;
+            }
+
             float finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
 
             if (idBill != -1)
             {
-                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n=> {1} - ({1} / 100) x {2} = {3}", table.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show(string.Format(culture, "Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n=> {1:C} - ({1:C} / 100) x {2} = {3:C}", table.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDataLayer.Instance.CheckOut(idBill, discount, (float)finalTotalPrice);
+                    BillDataLayer.Instance.CheckOut(idBill, discount, finalTotalPrice);
                     ShowBill(table.ID);
 
                     LoadTable();
@@ -363,6 +387,7 @@ namespace QuanLyCuaHang.WinForm
 
         private void cbFood_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //MessageBox.Show("select");
 
         }
 

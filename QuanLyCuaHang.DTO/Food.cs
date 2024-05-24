@@ -24,37 +24,47 @@ namespace QuanLyCuaHang.DTO
             this.CategoryID = (int)row["idcategory"];
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
         }
-
+        private int iD;
+        private string name;
+        private int categoryID;
         private float price;
 
-        public float Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
 
-        private int categoryID;
+        public int ID { get => iD; set => iD = value; }
+        public string Name { get => name; set => name = value; }
+        public int CategoryID { get => categoryID; set => categoryID = value; }
+        public float Price { get => price; set => price = value; }
 
-        public int CategoryID
-        {
-            get { return categoryID; }
-            set { categoryID = value; }
-        }
+        //private float price;
 
-        private string name;
+        //public float Price
+        //{
+        //    get { return price; }
+        //    set { price = value; }
+        //}
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        //private int categoryID;
 
-        private int iD;
+        //public int CategoryID
+        //{
+        //    get { return categoryID; }
+        //    set { categoryID = value; }
+        //}
 
-        public int ID
-        {
-            get { return iD; }
-            set { iD = value; }
-        }
+        //private string name;
+
+        //public string Name
+        //{
+        //    get { return name; }
+        //    set { name = value; }
+        //}
+
+        //private int iD;
+
+        //public int ID
+        //{
+        //    get { return iD; }
+        //    set { iD = value; }
+        //}
     }
 }

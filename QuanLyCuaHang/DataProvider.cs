@@ -51,7 +51,7 @@ namespace QuanLyCuaHang.DataLayer
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-       adapter.Fill(data);
+                adapter.Fill(data);
 
                 connection.Close();
             }
@@ -80,6 +80,8 @@ namespace QuanLyCuaHang.DataLayer
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
+
+
                     }
                 }
 
@@ -114,7 +116,7 @@ namespace QuanLyCuaHang.DataLayer
                         }
                     }
                 }
-                 
+
                 data = command.ExecuteScalar();
 
                 connection.Close();

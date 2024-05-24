@@ -42,24 +42,23 @@ namespace QuanLyCuaHang.DataLayer
         }
         public void InsertBill(int id)
         {
-            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] {id});
         }
 
         public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
         {
-      //      DataTable dt = new DataTable();
-    //SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionData);
+            //DataTable dt = new DataTable();
+            //SqlConnection connection = new SqlConnection(DataProvider.Instance.connectionData);
+            //connection.Open();
+            //SqlCommand command = new SqlCommand("USP_GetListBillDate", connection);
+            //command.CommandType = CommandType.StoredProcedure;
+            //command.Parameters.AddWithValue("@CheckIn", checkIn);
+            //command.Parameters.AddWithValue("@CheckOut", checkOut);
+            //SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //adapter.Fill(dt);
+            //return dt;
 
-      //      connection.Open();
-        //SqlCommand command = new SqlCommand("USP_GetListBillDate", connection);
-      //      command.CommandType = CommandType.StoredProcedure;
-       //     command.Parameters.AddWithValue("@CheckIn", checkIn);
-       //     command.Parameters.AddWithValue("@CheckOut", checkOut);
-       //     SqlDataAdapter adapter = new SqlDataAdapter(command);
-      //      adapter.Fill(dt);
-
-      //      return dt;
-             return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
         }
 
         public DataTable GetBillListByDateAndPage(DateTime checkIn, DateTime checkOut, int pageNum)
