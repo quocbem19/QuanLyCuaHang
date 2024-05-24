@@ -126,9 +126,9 @@
             this.btnAddAccount = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgvAccount = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.rpViewer = new System.Windows.Forms.TabPage();
             this.quanLyCuaHangDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyCuaHangDataSet = new QuanLyCuaHang.WinForm.QuanLyCuaHangDataSet();
-            this.rpViewer = new System.Windows.Forms.TabPage();
             this.tcAdmin.SuspendLayout();
             this.tbBill.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -868,6 +868,7 @@
             this.dtgvCategory.ThemeStyle.RowsStyle.Height = 22;
             this.dtgvCategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvCategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCategory_CellContentClick);
             // 
             // guna2Panel11
             // 
@@ -1543,16 +1544,6 @@
             this.dtgvAccount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvAccount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // quanLyCuaHangDataSetBindingSource
-            // 
-            this.quanLyCuaHangDataSetBindingSource.DataSource = this.quanLyCuaHangDataSet;
-            this.quanLyCuaHangDataSetBindingSource.Position = 0;
-            // 
-            // quanLyCuaHangDataSet
-            // 
-            this.quanLyCuaHangDataSet.DataSetName = "QuanLyCuaHangDataSet";
-            this.quanLyCuaHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rpViewer
             // 
             this.rpViewer.Location = new System.Drawing.Point(4, 44);
@@ -1562,6 +1553,16 @@
             this.rpViewer.TabIndex = 5;
             this.rpViewer.Text = "BÁO CÁO";
             this.rpViewer.UseVisualStyleBackColor = true;
+            // 
+            // quanLyCuaHangDataSetBindingSource
+            // 
+            this.quanLyCuaHangDataSetBindingSource.DataSource = this.quanLyCuaHangDataSet;
+            this.quanLyCuaHangDataSetBindingSource.Position = 0;
+            // 
+            // quanLyCuaHangDataSet
+            // 
+            this.quanLyCuaHangDataSet.DataSetName = "QuanLyCuaHangDataSet";
+            this.quanLyCuaHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Administer
             // 

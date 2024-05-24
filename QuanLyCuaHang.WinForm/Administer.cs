@@ -41,9 +41,13 @@ namespace QuanLyCuaHang.WinForm
 
         void LoadData()
         {
+            //Quản Lý Mặt Hàng
             dtgvFood.DataSource = foodList;
+            //Quản Lý Tài khoản
             dtgvAccount.DataSource = accountList;
-            dtgvTable.DataSource = categoryList;
+            //Quản Lý Khu vực
+            dtgvTable.DataSource = tableList;
+            //Quản Lý Danh mục
             dtgvCategory.DataSource = categoryList;
             LoadDateTimePickerBill();
             LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
@@ -381,6 +385,11 @@ namespace QuanLyCuaHang.WinForm
                 page++;
 
             txbPageBill.Text = page.ToString();
+        }
+
+        private void dtgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
